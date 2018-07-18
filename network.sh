@@ -12,7 +12,7 @@ artifactsTemplatesFolder="artifact-templates"
 : ${GENERATED_DOCKER_COMPOSE_FOLDER:=./dockercompose}
 #: ${FABRIC_DOCKER_VERSION=docker-ce-18.03.0.ce}
 
-: ${DOMAIN:="example.com"}
+: ${DOMAIN:="ros.ru"}
 : ${IP_ORDERER:="127.0.0.1"}
 : ${ORG1:="a"}
 : ${ORG2:="b"}
@@ -41,9 +41,9 @@ COMPOSE_FILE_DEV=$TEMPLATES_DOCKER_COMPOSE_FOLDER/docker-composedev.yaml
 
 CHAINCODE_VERSION="1.0"
 CHAINCODE_COMMON_NAME=reference
-CHAINCODE_BILATERAL_NAME=relationship
-CHAINCODE_COMMON_INIT='{"Args":["init","a","100","b","100"]}'
-CHAINCODE_BILATERAL_INIT='{"Args":["init","a","100","b","100"]}'
+CHAINCODE_BILATERAL_NAME=spot_trading
+CHAINCODE_COMMON_INIT='{"Args":["init","price","25","quantity","100"]}'
+CHAINCODE_BILATERAL_INIT='{"Args":["init","price","25","quantity","100"]}'
 
 DEFAULT_ORDERER_PORT=7050
 DEFAULT_WWW_PORT=8080
